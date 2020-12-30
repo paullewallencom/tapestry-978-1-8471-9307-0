@@ -1,0 +1,26 @@
+<t:border t:pageTitle="All Celebrities in Collection" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_0_0.xsd">
+	<h1>All Celebrities in Collection</h1>
+
+	<t:grid t:source="celebritySource" rowsPerPage="5" row="celebrity"
+		remove="id, biography, birthDateVerified"
+		reorder="lastName,firstName,occupation,dateOfBirth">
+		<t:parameter name="lastNameCell">
+			<t:pagelink t:page="details" t:context="celebrity.id">
+      			${celebrity.lastName}
+    		</t:pagelink>
+		</t:parameter>
+	</t:grid>
+	<br />
+	<t:form>
+   		<t:select t:model="celebrityModel" t:value="selectedCelebrity" t:encoder="celebrityEncoder"/>
+    	<input type="submit" value="Submit"/>
+	</t:form>
+	<p>Selected Celebrity: ${selectedCelebrityName}</p>
+	<t:form>
+		<t:errors/>
+  		<t:label for="testDate">Date test</t:label>: 
+  		<t:dateinput t:date="theDate" t:id="testDate" t:dateFrom="lowerLimit"/>
+  		<input type="submit" value="Submit"/>
+	</t:form>
+	
+</t:border>

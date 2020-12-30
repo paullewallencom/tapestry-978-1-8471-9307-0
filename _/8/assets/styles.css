@@ -1,0 +1,37 @@
+DIV.t-beaneditor {
+  display: block;
+  background: white;
+  border: 2px solid green;
+  padding: 2px;
+  font-family: "Trebuchet MS", Arial, sans-serif;
+}
+
+DIV.t-beaneditor LABEL {
+  width: 150px;
+  display: block;
+  float: left;
+  text-align: right;
+  clear: left;
+  padding-right: 3px;
+}
+
+input.t-beaneditor-submit {
+  position: relative;
+  left: 150px;
+}
+
+DIV.t-error LI {
+  margin-left: 20px;
+}
+
+body, table, input, select {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 10pt;
+}
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20pt;
+    font-weight: bold;
+    color: #204060;
+}

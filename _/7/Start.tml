@@ -1,0 +1,55 @@
+<html xmlns:t="http://tapestry.apache.org/schema/tapestry_5_0_0.xsd">
+    <head>
+        <title>${message:celebrity-collector}</title>
+        <link rel="stylesheet" href="${styles}" type="text/css"/>
+    </head>
+    <body>
+    <p align="right">
+      <img src="${asset:context:/assets/flag.gif}" align="middle"/>
+	  <t:actionlink t:id="switchlocale">
+	    ${localeLabel}
+	  </t:actionlink>
+	</p>
+        <h1>${message:celebrity-collector}</h1>
+
+        <p> ${message:login-here}: </p>
+
+        <t:form t:id="loginForm">
+        	<t:errors/>
+            <table>
+                <tr>
+                    <td>
+                        <t:label t:for="userName">
+								Label for the first text box</t:label>:
+                    </td>
+                    <td>
+                        <input type="text" t:id="userName" t:label="message:user-name"
+								t:type="TextField" t:value="userName" t:validate="required"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <t:label t:for="password">
+								The second label</t:label>:
+                    </td>
+                    <td>
+                        <input type="text" t:id="password" t:label="message:password"
+								t:type="PasswordField" t:value="password" t:validate="required"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center">
+                        <input type="submit" value="${message:log-in}"/>
+                    </td>
+                </tr>
+            </table>
+        </t:form>
+        <p>
+            <a href="#" t:type="PageLink" t:page="Registration">
+					${orRegisterLabel}</a>
+        </p>
+        <p>
+            <t:pagelink t:page="terms">Terms and Conditions</t:pagelink>
+        </p>
+    </body>
+</html>

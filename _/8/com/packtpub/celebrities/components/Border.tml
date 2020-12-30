@@ -1,0 +1,28 @@
+<html xmlns:t="http://tapestry.apache.org/schema/tapestry_5_0_0.xsd">
+<head>
+	<title>Celebrity Collector: ${pageTitle}</title>
+	<link rel="stylesheet" href="${asset:context:/assets/styles.css}" type="text/css" />
+</head>
+<body>
+	<div align="right">
+  		<t:localeswitcher/>
+	</div>
+  <table width="100%">
+	<tr>
+		<td width="100" valign="top"><br />
+			<br />
+			<br />
+			<t:if t:test="notStart">
+  				<t:pagelink t:page="Start">Home</t:pagelink><br/>
+  				<t:pagelink t:page="Registration" t:disabled="registration">Registration</t:pagelink><br/>
+  				<t:pagelink t:page="ShowAll" t:disabled="showAll">All Celebrities</t:pagelink><br/>
+  				<t:pagelink t:page="AddCelebrity" t:disabled="addCelebrity">Add New</t:pagelink>
+			</t:if>
+	    </td>
+		<td>
+			<t:body />
+		</td>
+	</tr>
+  </table>
+</body>
+</html>

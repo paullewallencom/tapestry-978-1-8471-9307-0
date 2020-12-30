@@ -1,0 +1,1 @@
+mvn archetype:create -DarchetypeGroupId=org.apache.tapestry -DarchetypeArtifactId=quickstart -DgroupId=com.packtpub -DartifactId=t5first -DpackageName=com.packtpub.t5first -Dversion=1.0.0-SNAPSHOT
